@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="maven-antrun-" default="main"  >
+<target name="main">
+  <taskdef resource="org/cruxframework/crux/tools/crux-module-tools.xml">
+    <classpath>
+      <path refid="maven.compile.classpath"/>
+    </classpath>
+  </taskdef>
+  <blockremove file="G:\Maven\HDFC\paytmbank\target/paytmbank/WEB-INF//web.xml" beginmarker="&lt;!--antReplacementBlockBegin--&gt;" endmarker="&lt;!--antReplacementBlockEnd--&gt;"/>
+  <serviceMapper projectDir="G:\Maven\HDFC\paytmbank\target/paytmbank">
+    <classpath>
+      <path refid="maven.compile.classpath"/>
+      <pathelement path="G:\Maven\HDFC\paytmbank\target/paytmbank/WEB-INF//classes/"/>
+    </classpath>
+  </serviceMapper>
+  <cruxmodulecompiler outputDir="G:\Maven\HDFC\paytmbank\target/paytmbank" keepPagesGeneratedFiles="true" webDir="G:\Maven\HDFC\paytmbank\target/paytmbank" pagesOutputDir="G:\Maven\HDFC\paytmbank\target/paytmbank" pageFileExtension="html" srcDir="G:\Maven\HDFC\paytmbank\src\main\java" outputCharset="UTF-8" doNotPreCompileJavaSource="true">
+    <classpath>
+      <path refid="maven.compile.classpath"/>
+    </classpath>
+    <jvmarg value="-Xmx768M"/>
+    <jvmarg value="-Xms256M"/>
+    <arg value="-localWorkers"/>
+    <arg value="2"/>
+  </cruxmodulecompiler>
+</target>
+</project>

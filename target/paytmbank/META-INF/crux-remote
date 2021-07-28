@@ -1,0 +1,6 @@
+#Crux RemoteServices implementations
+#Tue Jul 27 22:25:57 IST 2021
+com.google.gwt.user.client.rpc.XsrfTokenService=com.google.gwt.user.server.rpc.XsrfTokenServiceServlet
+org.cruxframework.crux.core.client.rpc.st.CruxSynchronizerTokenService=org.cruxframework.crux.core.server.dispatch.st.CruxSynchronizerTokenServiceImpl
+com.google.gwt.junit.client.impl.JUnitHost=com.google.gwt.junit.server.JUnitHostImpl
+com.google.gwt.logging.shared.RemoteLoggingService=com.google.gwt.logging.server.RemoteLoggingServiceImpl
